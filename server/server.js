@@ -21,7 +21,7 @@ massive(config.db_uri).then(dbInstance=>{
 //---------Endpoints-----------------
 app.get('/test', (req, res)=>{
     let db = req.app.get('db')
-    // db.test(7).then(resp=>{
+    // db.testSQL('Lloyd').then(resp=>{
     //     console.log(resp)
     // }).catch(console.log)
     
@@ -30,7 +30,7 @@ app.get('/test', (req, res)=>{
     // }).catch(console.log)
 
     db.test.find({
-        id: 2
+        name: 'Lloyd'
     }).then(resp=>{
         console.log(resp)
         res.status(200).send(resp);
