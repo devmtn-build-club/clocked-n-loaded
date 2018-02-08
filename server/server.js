@@ -20,8 +20,23 @@ massive(config.db_uri).then(dbInstance=>{
 
 //---------Endpoints-----------------
 app.get('/test', (req, res)=>{
+    let db = req.app.get('db')
+    // db.test(7).then(resp=>{
+    //     console.log(resp)
+    // }).catch(console.log)
+    
+    // db.query('SELECT * FROM test WHERE name = $1;', 'Lloyd').then(resp=>{
+    //     console.log(resp)
+    // }).catch(console.log)
+
+    db.test.find({
+        id: 2
+    }).then(resp=>{
+        console.log(resp)
+        res.status(200).send(resp);
+    }).catch(console.log)
     console.log('testing')
-    res.status(200).send('test successful')
+    // res.status(200).send('test successful')
 })
 
 
