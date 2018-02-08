@@ -3,7 +3,7 @@ Clocked-N-Loaded is a sweet project. Deets forthcoming.
 ---User side
 Basic clock in/out -> Hunter
 User hours         -> Elvis
- VVVVVVV
+ ↓     ↓
 Hour Correction Request 
 
 

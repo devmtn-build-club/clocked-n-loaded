@@ -26,4 +26,4 @@ app.get('/test', (req, res)=>{
 
 
 //---------Listen-----------------
-app.listen(PORT, ()=>console.log(`${new Date()}-> Listening on port: ${PORT}`))
+app.listen(PORT, ()=>console.log(`${new Date()}→ Listening on port: ${PORT}`))
